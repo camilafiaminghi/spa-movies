@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import InfosList from './components/InfosList.js'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <p>
         	Movies, categories, actors and info.
         </p>
+        <InfosList></InfosList>
       </header>
     </div>
   );

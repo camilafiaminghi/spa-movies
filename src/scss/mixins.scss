@@ -1,0 +1,22 @@
+/*
+ * Headings
+ */
+@mixin generateHeadings($base, $scale) {
+
+	@for $i from 1 through 6 {
+	  h#{$i} {
+	    font-size: $base + $scale * (6 - $i);
+	  }
+	}
+}
+// @include generateHeadings($base, $scale) { }
+
+/*
+ * Responsive
+ */
+@mixin breakpoint($breakpoint) {
+	@media #{$breakpoint} {
+		@content;
+	}
+}
+// @include breakpoint($xl-device-min) { }

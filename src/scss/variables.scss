@@ -1,0 +1,30 @@
+/*
+ * Breakpoints
+ */
+$xs-device-max: '(max-width: 543px)';  // Max width Extra small device
+$sm-device-max: '(max-width: 767px)';  // Max width Small device
+$md-device-max: '(max-width: 991px)';  // Max width Medium device
+$lg-device-max: '(max-width: 1199px)'; // Max width Large device
+$xs-device-min: '(min-width: 544px)'; // Min width Extra small device
+$sm-device-min: '(min-width: 768px)';  // Min width Small device
+$md-device-min: '(min-width: 992px)'; // Min width Medium device
+$lg-device-min: '(min-width: 1200px)'; // Min width Large device
+$xl-device-min: '(min-width: 1600px)'; // Min width Large device
+$md-sp-device-min: '(min-width: 920px)'; // Min width Medium device
+
+/*
+ * Colors
+ */
+$color-default: #fff;
+$color-darker: #47484A;
+$color-lighter: #79797A;
+
+$bg-default: #000;
+$bg-darker: #262422;
+$bg-lighter: #59595A;
+
+/*
+ * Fonts
+ */
+$base-font-size: 16px;
+$scale-font: 6;
