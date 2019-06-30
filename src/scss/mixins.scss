@@ -4,7 +4,7 @@
 @mixin generateHeadings($base, $scale) {
 
 	@for $i from 1 through 6 {
-	  h#{$i} {
+	  h#{$i}, .h#{$i} {
 	    font-size: $base + $scale * (6 - $i);
 	  }
 	}

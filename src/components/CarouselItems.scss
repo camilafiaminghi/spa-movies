@@ -1,0 +1,52 @@
+@import "./../scss/variables.scss";
+@import "./../scss/mixins.scss";
+
+.carousel-items {
+	width: 100%;
+
+	@include breakpoint($sm-device-min) {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.carousel-item {
+	cursor: pointer;
+	transition: all 0.3s linear 0s;
+
+	&:hover {
+		@include breakpoint($sm-device-min) {
+			transform: scale(1.1);
+		}
+
+		> div,
+		> strong {
+			transition: all 0.6s linear 0s;
+			color: $color-default;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	strong {
+		text-transform: uppercase;
+		font-weight: 400;
+
+		@include breakpoint($sm-device-min) {
+			color: $color-lighter;
+		}
+	}
+
+	div {
+		padding: 0.2em 1em;
+		text-align: center;
+
+		@include breakpoint($sm-device-min) {
+			color: $color-lighter;
+		}
+	}
+}

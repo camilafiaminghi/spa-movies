@@ -1,0 +1,71 @@
+[
+	{
+		"type": "rate",
+		"author": "",
+		"title": "5/5",
+		"subtitle": "",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+		"icon": "images/icon/stars-5.png",
+		"date": ""
+	},
+
+	{
+		"type": "rate",
+		"author": "",
+		"title": "14+",
+		"subtitle": "Lorem ipsum",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+		"icon": "images/icon/checked.png",
+		"date": ""
+	},
+
+	{
+		"type": "rate",
+		"author": "",
+		"title": "64%",
+		"subtitle": "Lorem ipsum",
+		"description": [["116","Reviews"], ["74", "Fresh"], ["42", "Rotten"], ["5.7", "Average"]],
+		"icon": "images/icon/tomato.png",
+		"date": ""
+	},
+
+	{
+		"type": "comment",
+		"author": "Lorem ipsum",
+		"title": "Lorem",
+		"subtitle": "",
+		"description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"icon": "images/icon/splash.png",
+		"date": "Jul 29 2016"
+	},
+
+	{
+		"type": "comment",
+		"author": "Kely Smith",
+		"title": "Lorem",
+		"subtitle": "",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+		"icon": "images/icon/tomato.png",
+		"date": "Jul 29 2016"
+	},
+
+	{
+		"type": "comment",
+		"author": "Lorem ipsum",
+		"title": "Lorem",
+		"subtitle": "",
+		"description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"icon": "images/icon/splash.png",
+		"date": "Jul 29 2016"
+	},
+
+	{
+		"type": "comment",
+		"author": "Kely Smith",
+		"title": "Lorem",
+		"subtitle": "",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
+		"icon": "images/icon/tomato.png",
+		"date": "Jul 29 2016"
+	}
+]

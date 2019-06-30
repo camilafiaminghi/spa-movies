@@ -54,7 +54,7 @@ class InfosList extends Component {
 								</dl>
 							</div>
 						</div>
-					);
+					)
 				})}
 			</div>
 		);

@@ -1,0 +1,117 @@
+@import "./../scss/variables.scss";
+@import "./../scss/mixins.scss";
+
+.carousel {
+	overflow: hidden;
+	padding: 1em 2em;
+	position: relative;
+
+	@include breakpoint($sm-device-min) {
+		padding: 2em 4em;
+	}
+
+	.carousel-title {
+		color: $color-lighter
+	}
+
+	button {
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		color: $color-default;
+		opacity: 0.7;
+		cursor: pointer;
+		transition: all 0.3s linear 0s;
+		display: none;
+
+		&:after {
+			display: block;
+			font-size: 70px;
+		}
+
+		&:hover {
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+
+		&.active {
+			@include breakpoint($sm-device-min) {
+				display: block;
+			}
+		}
+
+		&.carousel-left {
+			left: 0;
+
+			&:after {
+				content: "⟨"
+			}
+		}
+
+		&.carousel-right {
+			right: 0;
+
+			&:after {
+				content: "⟩"
+			}
+		}
+	}
+}
+
+.carousel-pages {
+	position: relative;
+	transition: all 0.8s linear 0s;
+
+	@include breakpoint($sm-device-max) {
+		overflow: auto;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+		scroll-snap-align: start;
+		display: flex;
+	}
+
+	&:before,
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+
+	&::-webkit-scrollbar {
+	  width: 0;
+	  height: 0;
+	}
+
+	&::-webkit-scrollbar-thumb {
+	  background: black;
+	  border-radius: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+	  background: transparent;
+	}
+}
+
+.carousel-page {
+	float: left;
+	opacity: 0.5;
+
+	&.active {
+		opacity: 1;
+	}
+
+	@include breakpoint($sm-device-max) {
+		float: none;
+		position: relative;
+		display: flex;
+		flex-shrink: 0;
+		scroll-snap-align: start;
+		transform-origin: center center;
+	  transform: scale(1);
+	  transition: transform 0.5s;
+	  opacity: 1;
+	}
+}

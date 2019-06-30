@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.scss';
+import Carousel from './Carousel.js'
 import InfosList from './InfosList.js'
 import infos from './../__mocks__/infos.json'
+import actors from './../__mocks__/actors.json'
+import extras from './../__mocks__/extras.json'
 
 class App extends Component {
 	render() {
@@ -14,7 +17,14 @@ class App extends Component {
 					<p>
 						Movies, categories, actors and info.
 					</p>
-					<InfosList infos={infos}></InfosList>
+
+					<Carousel
+						title="Title"
+						items={actors}
+						perPage={6} />
+
+					<InfosList
+						infos={infos} />
 				</header>
 			</div>
 		);
