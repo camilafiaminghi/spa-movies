@@ -6,7 +6,7 @@ const InfosIcon = ({title, icon, description}) => {
 	return (
 		<Fragment>
 			<dt>
-				<img src={require(`./../${icon}`)} alt={title} />
+				<img className="img-icon" src={require(`./../${icon}`)} alt={title} />
 			</dt>
 			<dd>{description}</dd>
 		</Fragment>

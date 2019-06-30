@@ -1,0 +1,104 @@
+@import "./../scss/variables.scss";
+@import "./../scss/mixins.scss";
+
+.infos-list {
+	display: flex;
+	padding: 2em 0 6em 0;
+	margin: 0 4vw;
+	flex-direction: column;
+	background-color: $bg-darker;
+
+	@include breakpoint($sm-device-min) {
+		border-top: 2px solid $bg-lighter;
+		flex-direction: row;
+	}
+
+	button {
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		color: $color-default;
+		text-align: left;
+		padding: 0 2em 0 0;
+		position: relative;
+		border-top: 1px solid $bg-lighter;
+
+		&:after {
+			display: block;
+			content: '〈';
+			position: absolute;
+			font-size: 1.8em;
+			top: 40%;
+			right: 0;
+			transform: rotate(-90deg);
+		}
+
+		&:hover {
+			color: $color-default;
+		}
+
+		&.active {
+			&:after {
+				transition: transform 0.6s linear 0;
+				transform: rotate(90deg);
+				top: 20%;
+			}
+		}
+
+		@include breakpoint($sm-device-min) {
+			display: none;
+		}
+	}
+
+	.info-list-content {
+
+		@include breakpoint($sm-device-max) {
+			display: none;
+		}
+
+		&.active {
+			display: block;
+		}
+	}
+
+	.info-list-section {
+		min-width: 220px;
+		display: flex;
+		flex-direction: column;
+
+		@include breakpoint($sm-device-min) {
+			padding: 0 1vw;
+		}
+	}
+
+	.info-list-title {
+		@include breakpoint($sm-device-max) {
+			display: none;
+		}
+	}
+
+	dl {
+		display: grid;
+		grid-template: auto / auto auto;
+		margin: 0;
+
+		@include breakpoint($sm-device-max) {
+			padding: 0 0 2em 0;
+		}
+
+		dt {
+			grid-column: 1;
+			padding: 0 1em 0 0;
+		}
+
+		dd {
+			grid-column: 2;
+			color: $color-lighter;
+			padding: 0;
+		}
+
+		dt, dd {
+			margin: 0.3em 0;
+		}
+	}
+}
