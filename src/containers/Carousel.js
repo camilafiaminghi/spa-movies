@@ -63,7 +63,7 @@ class Carousel extends Component {
 
 		return (
 			<section className="carousel" ref={this.refCallback}>
-				<h1 className="carousel-title">{title}</h1>
+				<h1 className="carousel-title h2">{title}</h1>
 				<div
 					style={{width:`${wrapperWidth}px`, transform:translate}}
 					className="carousel-pages">

@@ -5,6 +5,7 @@ import InfosList from './InfosList.js'
 import infos from './../__mocks__/infos.json'
 import actors from './../__mocks__/actors.json'
 import extras from './../__mocks__/extras.json'
+import category from './../__mocks__/category.json'
 
 class App extends Component {
 	render() {
@@ -17,6 +18,11 @@ class App extends Component {
 					<p>
 						Movies, categories, actors and info.
 					</p>
+
+					<Carousel
+						title="Category Title"
+						items={category}
+						perPage={10} />
 
 					<Carousel
 						title="Title"
