@@ -1,5 +1,6 @@
 @import "./../scss/variables.scss";
 @import "./../scss/mixins.scss";
+@import "./../../node_modules/rfs/scss";
 
 .banner {
 	background-color: $bg-default;
@@ -7,38 +8,38 @@
 	background-position: top right;
   background-size: 120% auto;
   background-repeat: no-repeat;
-  font-size: 18px;
-  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @include font-size(18px);
+  // @include responsive-font-size(16px);
 
 	@include breakpoint($md-device-min) {
 		padding-top: 0;
 		min-height: 80vh;
+		height: auto;
 		background-size: auto 100%;
 		background-position: top right;
 	}
 
 	.banner-content {
+		flex: 0 1 auto;
 		display: flex;
 		flex-direction: column;
-		padding: 8%;
+  	align-items: center;
+  	justify-content: space-around;
 
-		@include breakpoint($md-device-min) {
-			flex-direction: row;
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			padding: 14% 10% 0 10%;
-		}
+  	@include breakpoint($md-device-min) {
+  		max-width: 70%;
+  		flex-direction: row;
+  		align-items: flex-start;
+  		margin: 0 0 2em 0;
+  	}
 	}
 
 	.banner-section {
-		overflow-x: hidden;
-
-		@include breakpoint($md-device-min) {
-			padding: 0 20% 2% 0;
-		}
+		padding: 2em;
 	}
 
 	.banner-title {
