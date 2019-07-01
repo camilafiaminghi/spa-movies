@@ -1,0 +1,100 @@
+@import "./../scss/variables.scss";
+@import "./../scss/mixins.scss";
+
+.banner {
+	background-color: $bg-default;
+	position: relative;
+	background-position: top right;
+  background-size: 120% auto;
+  background-repeat: no-repeat;
+  font-size: 18px;
+  padding-top: 20vh;
+
+	@include breakpoint($md-device-min) {
+		padding-top: 0;
+		min-height: 80vh;
+		background-size: auto 100%;
+		background-position: top right;
+	}
+
+	.banner-content {
+		display: flex;
+		flex-direction: column;
+		padding: 8%;
+
+		@include breakpoint($md-device-min) {
+			flex-direction: row;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 14% 10% 0 10%;
+		}
+	}
+
+	.banner-section {
+		overflow-x: hidden;
+
+		@include breakpoint($md-device-min) {
+			padding: 0 20% 2% 0;
+		}
+	}
+
+	.banner-title {
+		width: 0;
+		height: 0;
+		margin: 0;
+		overflow: hidden;
+		text-indent: -6000px;
+	}
+
+	.banner-infos,
+	.banner-features,
+	.banner-infos li {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.banner-infos {
+		li {
+			margin: 0 0.6em 0 0;
+		}
+	}
+
+	.banner-features {
+		li {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0 0.4em 0 0;
+		}
+
+		button {
+			cursor: pointer;
+			border: none;
+			background-color: $bg-lighter;
+			border-radius: 5px;
+			padding: 0 0.6em;
+			min-height: 50px;
+			color: $color-default;
+			transition: all 0.6s linear 0s;
+			display: block;
+
+			@include breakpoint($sm-device-min) {
+				min-width: 100px;
+			}
+
+			&:hover {
+				background-color: $bg-darker;
+				// transform: scale(1.1);
+			}
+		}
+	}
+}

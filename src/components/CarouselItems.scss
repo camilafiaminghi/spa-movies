@@ -42,10 +42,11 @@
 	}
 
 	div {
-		padding: 0.2em 1em;
+		padding: 0.2em 2.5em;
 		text-align: center;
 
 		@include breakpoint($sm-device-min) {
+			padding: 0.2em 1em;
 			color: $color-lighter;
 		}
 	}

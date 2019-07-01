@@ -1,0 +1,20 @@
+{
+	"title": "BadMoms",
+	"image": "images/banners/badmoms.png",
+	"infos": [
+		{ "content": "64%", "icon": "images/icon/tomato.png", "title": ""},
+		{ "content": "14+", "icon": "images/icon/checked.png", "title": ""},
+		{ "content": "1h 36min", "icon": "", "title": ""},
+		{ "content": "2016", "icon": "", "title": ""},
+		{ "content": "", "icon": "images/icon/pg-13.png", "title": "PG-13"},
+		{ "content": "", "icon": "images/icon/hd.png", "title": "HD"},
+		{ "content": "", "icon": "images/icon/ad.png", "title": "AD"}
+	],
+	"description": "Ut lectus enim, gravida vestibulum imperdiet ut, efficitur nec erat. Proin ullamcorper auctor erat, sit amet laoreet risus euismod at. Proin vitae mi eget felis consectetur feugiat. Curabitur ornare, nisi et viverra rhoncus, felis mauris fermentum lacus, rutrum pharetra diam enim ut nisl. Integer pellentesque ex eu lorem porta rutrum. Nulla facilisi. Curabitur elementum bibendum ex, ut placerat nisi consequat sit amet. Mauris et ipsum lobortis, dignissim sapien id, tincidunt lorem. Nulla id quam orci. Aliquam et metus elit. Aenean aliquam posuere semper.",
+	"features": [
+		{ "content": "", "icon": "images/icon/trailer.png", "title": "Title"},
+		{ "content": "$14.99", "icon": "", "title": "Title"},
+		{ "content": "", "icon": "images/icon/plus.png", "title": "Title"},
+		{ "content": "", "icon": "images/icon/share.png", "title": "Title"}
+	]
+}

@@ -5,13 +5,15 @@
 	overflow: hidden;
 	padding: 1em 2em;
 	position: relative;
+	border-top: 1px solid $bg-lighter;
 
 	@include breakpoint($sm-device-min) {
+		border-top: none;
 		padding: 2em 4em;
 	}
 
 	.carousel-title {
-		color: $color-lighter
+		color: $color-lighter;
 	}
 
 	button {
