@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import CarouselItems from './../components/CarouselItems';
+import CarouselNav from './../components/CarouselNav';
 import './Carousel.scss';
 
 class Carousel extends Component {
@@ -21,7 +22,7 @@ class Carousel extends Component {
 	}
 
 	handlePagination = (direction) => {
-		const current = (direction === 'left') ? this.state.current + 1 : this.state.current - 1;
+		const current = (direction === 'right') ? this.state.current + 1 : this.state.current - 1;
 		this.setState((oldState) => ({...oldState, current}));
 	}
 
@@ -65,12 +66,13 @@ class Carousel extends Component {
 			<section className="carousel" ref={this.refCallback}>
 				<h1 className="carousel-title h2">{title}</h1>
 				<div
+					role="complementary"
 					style={{width:`${wrapperWidth}px`, transform:translate}}
 					className="carousel-pages">
 
 					{pagesList.map((page, index) => (
 						<div
-							key={`item-${index}`}
+							key={`page-${index}`}
 							style={{width:`${pageWidth}px`}}
 							className={(current === index) ? 'carousel-page active' : 'carousel-page'}>
 
@@ -83,12 +85,10 @@ class Carousel extends Component {
 
 				</div>
 
-				<button
-					onClick={() => this.handlePagination('right')}
-					className={(current >= 1) ? 'carousel-left active' : 'carousel-left'}></button>
-				<button
-					onClick={() => this.handlePagination('left')}
-					className={(current < (pagesList.length - 1)) ? 'carousel-right active' : 'carousel-right'}></button>
+				<CarouselNav
+					left={current >= 1}
+					right={current < (pagesList.length - 1)}
+					handleNavigation={this.handlePagination} />
 			</section>
 		);
 	}
