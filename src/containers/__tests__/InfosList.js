@@ -21,6 +21,7 @@ describe('<InfosList />', () => {
 		const { getByTestId } = render(<InfosList infos={infos} />)
 		const button = getByTestId('button-0')
 		const content = getByTestId('info-list-content-0')
+
 		fireEvent.click(button)
 		expect(button).toHaveClass('active')
 		expect(content).toHaveClass('active')

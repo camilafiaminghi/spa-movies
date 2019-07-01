@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-const InfosIcon = ({title, icon, description}) => {
+const InfoIcon = ({title, icon, description}) => {
 
 	return (
 		<Fragment>
@@ -13,10 +13,10 @@ const InfosIcon = ({title, icon, description}) => {
 	)
 }
 
-InfosIcon.propTypes = {
+InfoIcon.propTypes = {
 	title: PropTypes.string,
-	icon: PropTypes.string,
+	icon: PropTypes.string.isRequired,
 	description: PropTypes.string
 }
 
-export default InfosIcon
+export default InfoIcon

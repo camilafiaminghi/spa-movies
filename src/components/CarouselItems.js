@@ -5,9 +5,10 @@ import './CarouselItems.scss';
 const CarouselItems = ({items, itemWidth}) => {
 
 	return (
-		<div className="carousel-items">
+		<div className="carousel-items" role="list">
 			{items.map((item, index) => (
 				<div
+					role="listitem"
 					className="carousel-item"
 					key={`item-${index}`}
 					style={{width:`${100/itemWidth}%`}}>
