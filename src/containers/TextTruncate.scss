@@ -1,0 +1,14 @@
+@import "./../scss/variables.scss";
+@import "./../scss/mixins.scss";
+@import "./../../node_modules/rfs/scss";
+
+.text-truncate-toggle {
+	color: $color-default;
+	font-style: italic;
+	text-decoration: underline;
+	@include responsive-font-size(1em);
+
+	&:hover {
+		color: $color-default;
+	}
+}
