@@ -1,13 +1,13 @@
 [
 	{
-		"title": "1 Menu Item",
+		"title": "Menu Item",
 		"url": "#",
 		"subitems": [
 			{"title": "sub item", "url": "#"}
 		]
 	},
 	{
-		"title": "2 Menu Item",
+		"title": "Menu Item",
 		"url": "#",
 		"subitems": [
 			{"title": "sub item", "url": "#"},
@@ -15,7 +15,7 @@
 		]
 	},
 	{
-		"title": "3 Menu Item",
+		"title": "Menu Item",
 		"url": "#",
 		"subitems": [
 			{"title": "sub item", "url": "#"},

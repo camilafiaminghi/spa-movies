@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import CarouselItems from './../components/CarouselItems';
 import CarouselNav from './../components/CarouselNav';
+import device from './../utils/device'
 import './Carousel.scss';
 
 class Carousel extends Component {
@@ -28,7 +29,7 @@ class Carousel extends Component {
 
 	setPages = () => {
 		const { items, perPage } = this.props;
-		const isMobile = (window.innerWidth <= 544) ? true : false;
+		const { isMobile } = device;
 		const itemsPerPage = (window.innerWidth > 544) ? (window.innerWidth <= 992 ? Math.floor(perPage/2) : perPage) : 1;
 		const pages = !(items.length % itemsPerPage) ? Math.floor(items.length / itemsPerPage) : Math.floor(items.length / itemsPerPage) + 1;
 		let pagesList = [];
