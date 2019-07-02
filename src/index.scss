@@ -11,7 +11,7 @@ body {
   // font-size: 16px;
  	// @include font-size(16px);
  	@include responsive-font-size(16px);
- 	line-height: 1.5em;
+ 	// line-height: 2em;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,7 +20,7 @@ body {
   color: $color-default;
 
   @include breakpoint($sm-device-max) {
-  	border-top: 1px solid #fff;
+  	border-top: 1px solid $bg-lighter;
   }
 }
 
