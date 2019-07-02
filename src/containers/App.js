@@ -21,7 +21,8 @@ class App extends Component {
 				<Carousel
 					title="Category Title"
 					items={category}
-					perPage={[10,5,3]} />
+					perPage={[10,5,3]}
+					heading="h4" />
 
 				<Carousel
 					title="Title"

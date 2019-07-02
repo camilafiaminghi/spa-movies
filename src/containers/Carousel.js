@@ -9,7 +9,8 @@ class Carousel extends Component {
 	static propTypes = {
 		items: PropTypes.array.isRequired,
 		perPage: PropTypes.array.isRequired,
-		title: PropTypes.string
+		title: PropTypes.string,
+		heading: PropTypes.string
 	}
 
 	state = {
@@ -57,12 +58,12 @@ class Carousel extends Component {
 
 	render() {
 		const { current, pagesList, pageWidth, itemsPerPage, isMobile } = this.state;
-		const { title } = this.props;
+		const { title, heading } = this.props;
 		const translate = (!isMobile) ? `translate(${(-pageWidth * current)}px, 0)` : 'translate(0,0)';
 
 		return (
 			<section className="carousel">
-				<h1 className="carousel-title h2">{title}</h1>
+				<h1 className={(heading) ? `carousel-title ${heading}` : `carousel-title h2`}>{title}</h1>
 
 				<div className="carousel-pagination" ref={this.refCallback}>
 					<div

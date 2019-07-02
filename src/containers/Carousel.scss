@@ -8,7 +8,7 @@
 
 	@include breakpoint($sm-device-min) {
 		border-top: none;
-		padding: 2em 0 2em 0;
+		padding: 1em 0 2em 0;
 	}
 }
 
@@ -17,7 +17,7 @@
 	padding: 0 1em;
 
 	@include breakpoint($sm-device-min) {
-		padding: 0 2em;
+		padding: 0 2.4em;
 	}
 }
 
