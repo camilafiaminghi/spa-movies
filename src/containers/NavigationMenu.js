@@ -33,26 +33,27 @@ class NavigationMenu extends Component {
 					<span></span>
 				</button>
 
-				{items
-					&& <ul className={(active) ? 'navigation-list active' : 'navigation-list'}>
-					{items.map((item, index) => (
-						<li
-							key={`menuitem-index-${index}`}
-							className="navigation-item">
-							<a href={item.url}>{item.title}</a>
+				<div className={(active) ? 'navigation-list active' : 'navigation-list'}>
+					{items && <ul className="navigation-items">
+						{items.map((item, index) => (
+							<li
+								key={`menuitem-index-${index}`}
+								className="navigation-item">
+								<a href={item.url}>{item.title}</a>
 
-							{item.subitems && <ul>
-								{item.subitems.map((subitem, index) => (
-									<li
-										key={`submenuitem-index-${index}`}
-										className="navigation-subitem">
-										<a href={subitem.url}>{subitem.title}</a>
-									</li>
-								))}
-							</ul>}
-						</li>
-					))}
-				</ul>}
+								{item.subitems && <ul>
+									{item.subitems.map((subitem, index) => (
+										<li
+											key={`submenuitem-index-${index}`}
+											className="navigation-subitem">
+											<a href={subitem.url}>{subitem.title}</a>
+										</li>
+									))}
+								</ul>}
+							</li>
+						))}
+					</ul>}
+				</div>
 			</nav>
 		)
 	}
