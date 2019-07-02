@@ -49,7 +49,7 @@
 		text-align: center;
 
 		@include breakpoint($sm-device-min) {
-			padding: 0.2em 1em;
+			padding: 0.2em 1em 0 1em;
 			color: $color-lighter;
 		}
 	}

@@ -8,7 +8,7 @@
 
 	@include breakpoint($sm-device-min) {
 		border-top: none;
-		padding: 1em 0 2em 0;
+		padding: 0.5em 0 2em 0;
 	}
 }
 
@@ -17,22 +17,13 @@
 	padding: 0 1em;
 
 	@include breakpoint($sm-device-min) {
-		padding: 0 2.4em;
+		padding: 0 2.6em;
 	}
 }
 
 .carousel-pagination {
 	position: relative;
-	padding: 0 1em;
-
-	@include breakpoint($sm-device-min) {
-		padding: 0 2em;
-	}
-}
-
-.carousel-pages {
-	position: relative;
-	transition: all 0.8s ease-in-out 0s;
+	padding: 0 2.4em;
 
 	@include breakpoint($sm-device-max) {
 		overflow: auto;
@@ -41,13 +32,7 @@
 		-webkit-overflow-scrolling: touch;
 		scroll-snap-align: start;
 		display: flex;
-	}
-
-	&:before,
-	&:after {
-		content: " ";
-		display: block;
-		clear: both;
+		padding: 0 1.3em;
 	}
 
 	&::-webkit-scrollbar {
@@ -62,6 +47,22 @@
 
 	&::-webkit-scrollbar-track {
 	  background: transparent;
+	}
+}
+
+.carousel-pages {
+	position: relative;
+	transition: all 0.8s ease-in-out 0s;
+
+	@include breakpoint($sm-device-max) {
+		display: flex;
+	}
+
+	&:before,
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
 	}
 }
 
