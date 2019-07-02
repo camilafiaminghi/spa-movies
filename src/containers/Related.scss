@@ -1,0 +1,45 @@
+@import "./../scss/variables.scss";
+@import "./../scss/mixins.scss";
+@import "./../../node_modules/rfs/scss";
+
+.related {
+	padding: 0 1.3em;
+
+	@include breakpoint($sm-device-min) {
+		border-top: none;
+		padding: 0.5em 0 2em 3.2em;
+	}
+}
+
+.related-items {
+	display: flex;
+	flex-direction: row;
+}
+
+.related-item {
+
+}
+
+.related-item-title {
+	color: $color-lighter;
+}
+
+.related-item-content {
+	display: flex;
+	flex-direction: row;
+
+	img {
+		max-width: 340px;
+		height: auto;
+		display: block;
+	}
+
+	p {
+		padding: 0 1.2em;
+		margin: 0;
+
+		@include breakpoint($md-device-min) {
+			@include responsive-font-size(20px);
+		}
+	}
+}
