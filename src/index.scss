@@ -10,7 +10,7 @@ body {
   font-weight: 400;
   // font-size: 16px;
  	// @include font-size(16px);
- 	@include responsive-font-size(16px);
+ 	@include responsive-font-size(1em);
  	// line-height: 2em;
 
   -webkit-font-smoothing: antialiased;
@@ -18,19 +18,19 @@ body {
 
   background-color: $bg-darker;
   color: $color-default;
-
-  @include breakpoint($sm-device-max) {
-  	border-top: 1px solid $bg-lighter;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
-	margin: 0.5em 0;
-	color: $color-default;
 }
 
 @include generateHeadings($base-font-size, $scale-font)
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 400;
+	color: $color-default;
+
+	@include breakpoint($sm-device-max) {
+		@include responsive-font-size(1.3em);
+	}
+}
 
 .img-icon {
 	max-height: 1em;
