@@ -5,15 +5,12 @@
 .banner {
 	background-color: $bg-default;
 	position: relative;
-	background-position: top right;
-  background-size: 120% auto;
+	background-position: top center;
+  background-size: 175% auto;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-
-  @include font-size(18px);
-  // @include responsive-font-size(16px);
+  justify-content: flex-start;
 
 	@include breakpoint($md-device-min) {
 		padding-top: 0;
@@ -23,23 +20,43 @@
 		background-position: top right;
 	}
 
+	.banner-image {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
 	.banner-content {
-		flex: 0 1 auto;
 		display: flex;
 		flex-direction: column;
   	align-items: center;
   	justify-content: space-around;
 
-  	@include breakpoint($md-device-min) {
-  		max-width: 70%;
+  	@include breakpoint($sm-device-min) {
   		flex-direction: row;
+  	}
+
+  	@include breakpoint($md-device-min) {
+  		max-width: 60%;
   		align-items: flex-start;
-  		margin: 0 0 2em 0;
+  		margin: 2em 0;
   	}
 	}
 
 	.banner-section {
-		padding: 2em;
+		padding: 20vh 2em 2em 2em;
+
+		@include breakpoint($md-device-min) {
+			padding: 20vh 3em 3em 3em;
+		}
+
+		p {
+			margin: 2em 0;
+
+			@include breakpoint($md-device-min) {
+				@include responsive-font-size(20px);
+			}
+		}
 	}
 
 	.banner-title {
@@ -78,23 +95,31 @@
 		}
 
 		button {
-			cursor: pointer;
-			border: none;
 			background-color: $bg-lighter;
 			border-radius: 5px;
 			padding: 0 0.6em;
 			min-height: 50px;
 			color: $color-default;
 			transition: all 0.6s linear 0s;
-			display: block;
+			margin: 0 0 0.5em 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 
 			@include breakpoint($sm-device-min) {
 				min-width: 100px;
+				margin: 0 0.5em 0.5em 0.5em;
 			}
 
 			&:hover {
-				background-color: $bg-darker;
-				// transform: scale(1.1);
+				background-color: $color-default;
+				transform: scale(1.1);
+				color: $color-darker;
+			}
+
+			img {
+				filter: invert(40%);
 			}
 		}
 	}

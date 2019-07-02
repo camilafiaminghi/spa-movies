@@ -21,12 +21,12 @@ class App extends Component {
 				<Carousel
 					title="Category Title"
 					items={category}
-					perPage={10} />
+					perPage={[10,5,3]} />
 
 				<Carousel
 					title="Title"
 					items={actors}
-					perPage={6} />
+					perPage={[6,4,3]} />
 
 				<InfosList
 					infos={infos} />

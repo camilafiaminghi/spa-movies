@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Banner.scss';
 import NavigationMenu from './../containers/NavigationMenu';
+import TextTruncate from './../containers/TextTruncate';
+import './Banner.scss';
 
 const Banner = ({title, image, infos, description, features, navigation}) => {
 
@@ -26,7 +27,9 @@ const Banner = ({title, image, infos, description, features, navigation}) => {
 							))}
 						</ul>
 
-						<p>{description}</p>
+						<p>
+							<TextTruncate text={description} len={300} />
+						</p>
 
 						<ul className="banner-features">
 							{(features) && features.map((feature, index) => (

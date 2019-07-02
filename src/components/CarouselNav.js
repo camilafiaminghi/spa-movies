@@ -11,13 +11,15 @@ const CarouselNav = ({handleNavigation, left, right}) => {
 				disabled={!left}
 				className={left ? 'carousel-button carousel-left active' : 'carousel-button carousel-left'}
 				tabIndex="0"
-				type="button">nav to left</button>
+				type="button"
+				aria-label="nav to left"></button>
 			<button
 				onClick={() => handleNavigation('right')}
 				disabled={!right}
 				className={right ? 'carousel-button carousel-right active' : 'carousel-button carousel-right'}
 				tabIndex="0"
-				type="button">nav to right</button>
+				type="button"
+				aria-label="nav to right"></button>
 		</Fragment>
 	)
 }

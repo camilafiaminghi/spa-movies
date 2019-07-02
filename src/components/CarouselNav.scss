@@ -3,23 +3,23 @@
 
 .carousel-button {
 	overflow: hidden;
-	text-indent: -6000px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	color: $color-default;
-	opacity: 0.7;
+	opacity: 0.5;
 	transition: all 0.3s linear 0s;
 	display: none;
+	outline: none;
 
 	&:after {
 		display: block;
-		font-size: 70px;
+		font-size: 75px;
+		padding: 0 0.2em;
 	}
 
 	&:hover {
 		opacity: 1;
-		background-color: rgba(255, 255, 255, 0.1);
 	}
 
 	&.active {

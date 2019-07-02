@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { checkIsMobile } from './../utils/device'
 import './CarouselItems.scss';
 
 const CarouselItems = ({items, itemWidth}) => {
+
+	const isMobile = checkIsMobile();
 
 	return (
 		<div className="carousel-items" role="list">
@@ -15,10 +18,12 @@ const CarouselItems = ({items, itemWidth}) => {
 					<div>
 						<img alt="" src={require(`./../${item.image}`)} />
 					</div>
-					<div className="h4">{item.name}</div>
-					<div className="h5">
-						<strong>{item.character}</strong>
-					</div>
+					{(item.name) && <div className={(!isMobile) ? `h4` : ''}>{item.name}</div>}
+					{(item.character) &&
+						<div className={(!isMobile) ? `h5` : ''}>
+							<strong>{item.character}</strong>
+						</div>
+					}
 				</div>
 			))}
 		</div>

@@ -4,7 +4,7 @@
 
 .navigation-menu {
 	min-width: 10vw;
-	padding: 2em 0 2em 2em;
+	padding: 20vh 0 3em 3em;
 	position: relative;
 
 	@include breakpoint($sm-device-max) {
@@ -18,7 +18,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		padding: 0.3em;
+		padding: 0.5em 0.3em;
 
 		@include breakpoint($sm-device-max) {
 			display: block;
@@ -48,7 +48,7 @@
 				}
 
 				&:nth-last-child(3) {
-					transform: rotate(45deg) translate(8px, 6px);
+					transform: rotate(45deg) translate(6px, 6px);
 				}
 			}
 		}

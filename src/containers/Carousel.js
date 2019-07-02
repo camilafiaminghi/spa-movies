@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import CarouselItems from './../components/CarouselItems';
 import CarouselNav from './../components/CarouselNav';
-import device from './../utils/device'
+import { checkIsMobile, compareDevice } from './../utils/device'
 import './Carousel.scss';
 
 class Carousel extends Component {
 	static propTypes = {
 		items: PropTypes.array.isRequired,
-		perPage: PropTypes.number.isRequired,
+		perPage: PropTypes.array.isRequired,
 		title: PropTypes.string
 	}
 
@@ -18,8 +18,7 @@ class Carousel extends Component {
 		pagesList: [],
 		pageWidth: 0,
 		itemsPerPage: 0,
-		wrapperWidth: 0,
-		isMobile: false
+		isMobile: checkIsMobile()
 	}
 
 	handlePagination = (direction) => {
@@ -29,8 +28,8 @@ class Carousel extends Component {
 
 	setPages = () => {
 		const { items, perPage } = this.props;
-		const { isMobile } = device;
-		const itemsPerPage = (window.innerWidth > 544) ? (window.innerWidth <= 992 ? Math.floor(perPage/2) : perPage) : 1;
+		const itemsPerPage = compareDevice(...perPage);
+
 		const pages = !(items.length % itemsPerPage) ? Math.floor(items.length / itemsPerPage) : Math.floor(items.length / itemsPerPage) + 1;
 		let pagesList = [];
 
@@ -43,8 +42,7 @@ class Carousel extends Component {
 			...oldState,
 			pagesList,
 			pages,
-			itemsPerPage,
-			isMobile
+			itemsPerPage
 		}));
 	}
 
@@ -60,36 +58,37 @@ class Carousel extends Component {
 	render() {
 		const { current, pagesList, pageWidth, itemsPerPage, isMobile } = this.state;
 		const { title } = this.props;
-		const wrapperWidth = (!isMobile) ? pageWidth * pagesList.length : pageWidth;
 		const translate = (!isMobile) ? `translate(${(-pageWidth * current)}px, 0)` : 'translate(0,0)';
 
 		return (
-			<section className="carousel" ref={this.refCallback}>
+			<section className="carousel">
 				<h1 className="carousel-title h2">{title}</h1>
-				<div
-					role="complementary"
-					style={{width:`${wrapperWidth}px`, transform:translate}}
-					className="carousel-pages">
 
-					{pagesList.map((page, index) => (
-						<div
-							key={`page-${index}`}
-							style={{width:`${pageWidth}px`}}
-							className={(current === index) ? 'carousel-page active' : 'carousel-page'}>
+				<div className="carousel-pagination" ref={this.refCallback}>
+					<div
+						role="complementary"
+						style={(!isMobile) ? {width:`${pageWidth * pagesList.length}px`, transform:translate} : {}}
+						className="carousel-pages">
 
-							<CarouselItems
-								itemWidth={itemsPerPage}
-								items={page} />
+						{pagesList.map((page, index) => (
+							<div
+								key={`page-${index}`}
+								style={{width:`${pageWidth}px`}}
+								className={(current === index) ? 'carousel-page active' : 'carousel-page'}>
 
-						</div>
-					))}
+								<CarouselItems
+									itemWidth={itemsPerPage}
+									items={page} />
+							</div>
+						))}
 
+					</div>
+
+					<CarouselNav
+						left={current >= 1}
+						right={current < (pagesList.length - 1)}
+						handleNavigation={this.handlePagination} />
 				</div>
-
-				<CarouselNav
-					left={current >= 1}
-					right={current < (pagesList.length - 1)}
-					handleNavigation={this.handlePagination} />
 			</section>
 		);
 	}

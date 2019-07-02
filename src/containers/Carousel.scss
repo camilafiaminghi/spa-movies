@@ -1,25 +1,38 @@
 @import "./../scss/variables.scss";
 @import "./../scss/mixins.scss";
+@import "./../../node_modules/rfs/scss";
 
 .carousel {
 	overflow: hidden;
-	padding: 1em 2em;
 	position: relative;
-	border-top: 1px solid $bg-lighter;
 
 	@include breakpoint($sm-device-min) {
 		border-top: none;
-		padding: 2em 4em;
+		padding: 2em 0 2em 0;
 	}
+}
 
-	.carousel-title {
-		color: $color-lighter;
+.carousel-title {
+	color: $color-lighter;
+	padding: 0 1em;
+
+	@include breakpoint($sm-device-min) {
+		padding: 0 2em;
+	}
+}
+
+.carousel-pagination {
+	position: relative;
+	padding: 0 1em;
+
+	@include breakpoint($sm-device-min) {
+		padding: 0 2em;
 	}
 }
 
 .carousel-pages {
 	position: relative;
-	transition: all 0.8s linear 0s;
+	transition: all 0.8s ease-in-out 0s;
 
 	@include breakpoint($sm-device-max) {
 		overflow: auto;

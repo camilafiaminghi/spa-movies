@@ -7,7 +7,7 @@ import Carousel from './../Carousel'
 import actors from './../../__mocks__/actors.json'
 
 const title = 'Carousel Title'
-const perPage = 6
+const perPage = [6,4,3]
 
 describe('<Carousel />', () => {
 
