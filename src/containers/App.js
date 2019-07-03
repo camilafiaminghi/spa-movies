@@ -31,8 +31,9 @@ class App extends Component {
 				<RelatedItems items={related} />
 
 				<ExtrasList
+					title="Extras"
 					items={extras}
-					title="Extras"/>
+					perPage={[4,2,1]} />
 
 				<Carousel
 					title="Title"

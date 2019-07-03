@@ -5,11 +5,21 @@ const ExtraRate = ({title, subtitle, icon, description}) => {
 
 	return (
 		<Fragment>
-			<h2>
+			<h1>
 				{(icon) && <img className="icon" src={require(`./../${icon}`)} alt={title} />} {title}
-			</h2>
-			<h3 className="h4">{subtitle}</h3>
-			<p>{description}</p>
+			</h1>
+			<h2 className="h4">{subtitle}</h2>
+			{(typeof description === 'string') && <p>{description}</p>}
+			{(typeof description === 'object') && (
+				<dl>
+					{description.map((item, index) => (
+						<Fragment key={`description-item-${index}`}>
+							<dt>{item[0]}</dt>
+							<dd>{item[1]}</dd>
+						</Fragment>
+					))}
+				</dl>
+			)}
 		</Fragment>
 	)
 }

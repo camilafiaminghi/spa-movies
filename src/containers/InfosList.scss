@@ -79,20 +79,24 @@
 		@include breakpoint($md-device-max) {
 			display: none;
 		}
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0;
+		}
 	}
 
 	dl {
 		@include breakpoint($sm-device-min) {
-			display: grid;
-			grid-template: auto / auto auto;
 			margin: 0;
 			padding: 0 0 2em 0;
+			display: grid;
+			grid-template: auto / auto auto;
+			grid-column-gap: 5%;
 		}
 
 		dt {
 			@include breakpoint($sm-device-min) {
 				grid-column: 1;
-				padding: 0 1em 0 0;
 			}
 		}
 
@@ -110,7 +114,7 @@
 			margin: 0.6em 0;
 
 			@include breakpoint($sm-device-min) {
-				margin: 0.3em 0;
+				margin: 0 0 0.8em 0;
 			}
 		}
 	}

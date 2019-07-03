@@ -1,6 +1,5 @@
 @import "./../scss/variables.scss";
 @import "./../scss/mixins.scss";
-@import "./../../node_modules/rfs/scss";
 
 .carousel {
 	overflow: hidden;
@@ -16,7 +15,7 @@
 	color: $color-lighter;
 	padding: 0 1em;
 
-	@include breakpoint($sm-device-min) {
+	@include breakpoint($md-device-max) {
 		padding: 0 2.6em;
 	}
 }

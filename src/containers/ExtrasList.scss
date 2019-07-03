@@ -1,28 +1,86 @@
 @import "./../scss/variables.scss";
 @import "./../scss/mixins.scss";
+@import "./../../node_modules/rfs/scss";
 
 .extras-list {
 	overflow-x: hidden;
+	position: relative;
 	padding: 0.5em 0 0.5em 1.2em;
 
 	@include breakpoint($sm-device-min) {
 		padding: 0.5em 0 2em 3.2em;
 	}
-}
 
-.extras-list-title {
-	color: $color-lighter;
-	margin: 0 0 0.6em 0;
-}
+	.extras-list-title {
+		color: $color-lighter;
+		margin: 0 0 0.6em 0;
+	}
 
-.extra-items {
-	display: flex;
-	flex-direction: row;
-}
+	.extras-pagination {
+		@include swipe($sm-device-max)
+	}
 
-.extra-item {
-	background-color: $bg-lighter;
-	border-radius: 0.5em;
-	padding: 0.8em;
-	margin: 0 0.8em 0 0;
+	.extras-pages,
+	.extras-page,
+	.extras-items {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.extras-pages {
+		transition: all 0.8s ease-in-out 0s;
+	}
+
+	.extras-page {
+		@include swipeChild($sm-device-max)
+	}
+
+	.extras-items {
+		/**/
+	}
+
+	.extras-item {
+		background-color: $bg-medium;
+		border-radius: 0.3em;
+		padding: 0.8em 1em;
+		margin: 0 2em 0 0;
+		align-self: stretch;
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0 0 0.5em 0;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+
+			@include breakpoint($md-device-max) {
+				@include responsive-font-size(1.6em);
+			}
+
+			img {
+				margin: 0 0.2em 0 0;
+			}
+		}
+	}
+
+	dl {
+		margin: 0;
+		padding: 0 0 2em 0;
+		display: grid;
+		grid-template: auto / auto auto;
+		grid-column-gap: 10%;
+
+		dt {
+			text-align: right;
+			grid-column: 1;
+		}
+
+		dd {
+			grid-column: 2;
+		}
+
+		dt, dd {
+			margin: 0;
+		}
+	}
 }

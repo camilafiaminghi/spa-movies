@@ -6,9 +6,9 @@ const ExtraComment = ({title, icon, description, author, date}) => {
 
 	return (
 		<Fragment>
-			<h2>
+			<h1>
 				<img className="icon" src={require(`./../${icon}`)} alt={title} /> {title}
-			</h2>
+			</h1>
 			<p>
 				<TextTruncate text={description} len={155} />
 			</p>
