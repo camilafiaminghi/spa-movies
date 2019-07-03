@@ -20,3 +20,42 @@
 	}
 }
 // @include breakpoint($xl-device-min) { }
+
+/*
+ * Responsive
+ */
+@mixin swipe($breakpoint) {
+	@include breakpoint($breakpoint) {
+		overflow: auto;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+		scroll-snap-align: start;
+	}
+
+	&::-webkit-scrollbar {
+	  width: 0;
+	  height: 0;
+	}
+
+	&::-webkit-scrollbar-thumb {
+	  background: black;
+	  border-radius: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+	  background: transparent;
+	}
+}
+// @include swipe($xl-device-min) { }
+
+@mixin swipeChild($breakpoint){
+	@include breakpoint($breakpoint) {
+		flex-shrink: 0;
+		scroll-snap-align: start;
+		transform-origin: center center;
+	  transform: scale(1);
+	  transition: transform 0.5s;
+	}
+}
+// @include swipeChild($xl-device-min) { }

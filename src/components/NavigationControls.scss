@@ -1,7 +1,7 @@
 @import "./../scss/variables.scss";
 @import "./../scss/mixins.scss";
 
-.carousel-button {
+.navigation-control {
 	overflow: hidden;
 	position: absolute;
 	top: 0;
@@ -14,12 +14,13 @@
 
 	&:after {
 		display: block;
-		font-size: 75px;
-		padding: 0 0.2em;
+		font-size: 80px;
+		padding: 0 0.1em;
 	}
 
 	&:hover {
 		opacity: 1;
+		// background-color: rgba(255, 255, 255, 0.2);
 	}
 
 	&.active {
@@ -28,7 +29,7 @@
 		}
 	}
 
-	&.carousel-left {
+	&.left {
 		left: 0;
 
 		&:after {
@@ -36,7 +37,7 @@
 		}
 	}
 
-	&.carousel-right {
+	&.right {
 		right: 0;
 
 		&:after {

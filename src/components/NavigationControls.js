@@ -1,22 +1,22 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import './CarouselNav.scss';
+import './NavigationControls.scss';
 
-const CarouselNav = ({handleNavigation, left, right}) => {
+const NavigationControls = ({handleNavigation, left, right}) => {
 
 	return (
 		<Fragment>
 			<button
 				onClick={() => handleNavigation('left')}
 				disabled={!left}
-				className={left ? 'carousel-button carousel-left active' : 'carousel-button carousel-left'}
+				className={left ? 'navigation-control left active' : 'navigation-control left'}
 				tabIndex="0"
 				type="button"
 				aria-label="nav to left"></button>
 			<button
 				onClick={() => handleNavigation('right')}
 				disabled={!right}
-				className={right ? 'carousel-button carousel-right active' : 'carousel-button carousel-right'}
+				className={right ? 'navigation-control right active' : 'navigation-control right'}
 				tabIndex="0"
 				type="button"
 				aria-label="nav to right"></button>
@@ -24,10 +24,10 @@ const CarouselNav = ({handleNavigation, left, right}) => {
 	)
 }
 
-CarouselNav.propTypes = {
+NavigationControls.propTypes = {
 	handleNavigation: PropTypes.func.isRequired,
 	left: PropTypes.bool.isRequired,
 	right: PropTypes.bool.isRequired
 }
 
-export default CarouselNav
+export default NavigationControls

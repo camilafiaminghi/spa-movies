@@ -22,8 +22,4 @@ describe('<Carousel />', () => {
 		const { getByText } = render(<Carousel title={title} perPage={perPage} items={actors} />)
   	expect(getByText(title)).toBeDefined()
   })
-
-  // it('has a ref attribute', () => {
-  // 	const { debug, container } = render(<Carousel title={title} perPage={perPage} items={actors} />, )
-  // })
 })

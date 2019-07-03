@@ -1,0 +1,71 @@
+@import "./../scss/variables.scss";
+@import "./../scss/mixins.scss";
+@import "./../../node_modules/rfs/scss";
+
+.related {
+	overflow-x: hidden;
+	position: relative;
+	padding: 0.5em 0 0.5em 1.2em;
+
+	@include breakpoint($sm-device-min) {
+		padding: 0.5em 0 2em 3.2em;
+	}
+}
+
+.related-wrapper {
+	overflow-x: hidden;
+
+}
+
+.related-items {
+	display: flex;
+	flex-direction: row;
+	transition: all 0.8s ease-in-out 0s;
+
+	@include swipe($sm-device-max)
+}
+
+.related-item {
+	@include breakpoint($sm-device-max) {
+		padding: 0 0.5em;
+	}
+
+	@include swipeChild($sm-device-max)
+}
+
+.related-item-title {
+	color: $color-lighter;
+}
+
+.related-item-content {
+	display: flex;
+	flex-direction: column;
+
+	@include breakpoint($sm-device-min) {
+		flex-direction: row;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		align-self: flex-start;
+
+		@include breakpoint($sm-device-min) {
+			width: 45%;
+		}
+	}
+
+	p {
+		padding: 1em 0;
+		margin: 0;
+
+		@include breakpoint($sm-device-min) {
+			padding: 0 1.2em;
+		}
+
+		@include breakpoint($md-device-min) {
+			@include responsive-font-size(20px);
+		}
+	}
+}

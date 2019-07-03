@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import CarouselItems from './../components/CarouselItems';
-import CarouselNav from './../components/CarouselNav';
+import NavigationControls from './../components/NavigationControls';
 import { checkIsMobile, compareDevice } from './../utils/device'
 import './Carousel.scss';
 
@@ -85,7 +85,7 @@ class Carousel extends Component {
 
 					</div>
 
-					<CarouselNav
+					<NavigationControls
 						left={current >= 1}
 						right={current < (pagesList.length - 1)}
 						handleNavigation={this.handlePagination} />

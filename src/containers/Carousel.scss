@@ -26,28 +26,10 @@
 	padding: 0 2.4em;
 
 	@include breakpoint($sm-device-max) {
-		overflow: auto;
-		scroll-snap-type: x mandatory;
-		scroll-behavior: smooth;
-		-webkit-overflow-scrolling: touch;
-		scroll-snap-align: start;
-		display: flex;
 		padding: 0 1.3em;
 	}
 
-	&::-webkit-scrollbar {
-	  width: 0;
-	  height: 0;
-	}
-
-	&::-webkit-scrollbar-thumb {
-	  background: black;
-	  border-radius: 10px;
-	}
-
-	&::-webkit-scrollbar-track {
-	  background: transparent;
-	}
+	@include swipe($sm-device-max)
 }
 
 .carousel-pages {
@@ -77,12 +59,8 @@
 	@include breakpoint($sm-device-max) {
 		float: none;
 		position: relative;
-		display: flex;
-		flex-shrink: 0;
-		scroll-snap-align: start;
-		transform-origin: center center;
-	  transform: scale(1);
-	  transition: transform 0.5s;
-	  opacity: 1;
+		opacity: 1;
 	}
+
+	@include swipeChild($sm-device-max)
 }

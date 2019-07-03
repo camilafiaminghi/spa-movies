@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import Banner from './../components/Banner.js'
 import Carousel from './Carousel.js'
-import Related from './Related.js'
+import RelatedItems from './RelatedItems.js'
 import InfosList from './InfosList.js'
 
 import banner from './../__mocks__/banner.json'
@@ -26,7 +26,7 @@ class App extends Component {
 					perPage={[10,5,3]}
 					heading="h4" />
 
-				<Related items={related} />
+				<RelatedItems items={related} />
 
 				<Carousel
 					title="Title"
