@@ -48,7 +48,6 @@ class ExtrasList extends Component {
 	}
 
 	refCallback = (el) => {
-		const { isMobile } = this.state;
 		const { items } = this.props;
 		const width = (el) ? window.getComputedStyle(el, null).width.split('px')[0] : 0;
 		const pageWidth = (items.length > 1) ? Math.round(width - (width/6)) : Math.round(width);
@@ -60,8 +59,8 @@ class ExtrasList extends Component {
 	}
 
 	render() {
-		const { current, pagesList, pageWidth, itemsPerPage, isMobile } = this.state;
-		const { items, title } = this.props;
+		const { current, pagesList, pageWidth, isMobile } = this.state;
+		const { title } = this.props;
 		const translate = (!isMobile) ? `translate(${(-pageWidth * current)}px, 0)` : 'translate(0,0)';
 
 		return (
