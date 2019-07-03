@@ -3,6 +3,7 @@ import './App.scss';
 import Banner from './../components/Banner.js'
 import Carousel from './Carousel.js'
 import RelatedItems from './RelatedItems.js'
+import ExtrasList from './ExtrasList.js'
 import InfosList from './InfosList.js'
 
 import banner from './../__mocks__/banner.json'
@@ -11,6 +12,7 @@ import actors from './../__mocks__/actors.json'
 import category from './../__mocks__/category.json'
 import navigation from './../__mocks__/navigation.json'
 import related from './../__mocks__/related.json'
+import extras from './../__mocks__/extras.json'
 
 class App extends Component {
 	render() {
@@ -27,6 +29,10 @@ class App extends Component {
 					heading="h4" />
 
 				<RelatedItems items={related} />
+
+				<ExtrasList
+					items={extras}
+					title="Extras"/>
 
 				<Carousel
 					title="Title"

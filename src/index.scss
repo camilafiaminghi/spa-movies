@@ -8,10 +8,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  // font-size: 16px;
- 	// @include font-size(16px);
- 	@include responsive-font-size(1em);
- 	// line-height: 2em;
+  @include responsive-font-size(1em);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,6 +33,11 @@ h1, h2, h3, h4, h5, h6,
 	max-height: 1em;
 	width: auto;
 	margin: 0.3em 0;
+}
+
+.icon {
+	max-height: 1em;
+	width: auto;
 }
 
 ul, ol {

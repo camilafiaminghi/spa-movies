@@ -16,7 +16,7 @@ describe('<RelatedITems />', () => {
 	})
 
 	it('has items', () => {
-		const { debug, getAllByTestId } = render(<RelatedITems items={related} />)
+		const { getAllByTestId } = render(<RelatedITems items={related} />)
 		expect(getAllByTestId('related-item')).toHaveLength(related.length)
 	})
 })
