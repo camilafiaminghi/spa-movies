@@ -42,7 +42,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-react": "^6.24.1",
     "jest-dom": "^3.5.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1"
   },
   "jest": {
     "coveragePathIgnorePatterns": [
